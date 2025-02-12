@@ -27,7 +27,7 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <ul className="hidden md:flex text-lg md:text-2xl space-x-6">
           {["Home", "Destinations", "Contact"].map((item) => (
-            <li key={item} className="text-white hover:text-purple-800 cursor-pointer">
+            <li key={item} className={`cursor-pointer ${isScrolled ?  "text-cyan-200 hover:text-amber-50"  :"hover:text-cyan-200 text-white "}`}>
               {item}
             </li>
           ))}
@@ -46,7 +46,7 @@ const Navbar = () => {
             {["🏠Home", "✈️Destinations", "☎️Contact"].map((item) => (
               <li
                 key={item}
-                className="text-white hover:text-purple-800 cursor-pointer"
+                className="text-white hover:text-cyan-200 cursor-pointer"
                 onClick={toggleMenu}
               >
                 {item}
